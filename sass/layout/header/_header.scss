@@ -1,0 +1,43 @@
+.site-header {
+    padding: ms(4);
+    text-align: center;
+    @include respondTo(atleast-extra-wide) {
+        margin: ms(4) 0;
+        padding: ms(4);
+    }
+}
+
+.site-branding {
+    padding: ms(2) 0;
+    @include animation(fadein 1s ease-out 0s backwards);
+    color: #fff;
+
+    @include transition(all 0.5s ease-in-out);
+
+    h1 {
+        font-size: ms(2);
+        letter-spacing: ms(-15);
+        margin: 0 0 ms(-8);
+        a {
+            color: $color__headerlink;
+            text-decoration: none;
+            &:hover {
+                color: $color__headerlink-hover;
+                //text-decoration: underline;
+            }
+        }
+
+    }
+    h2 {
+        font-size: ms(-2);
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: ms(-12);
+        margin: 0;
+        color: rgba(white,.4);
+    }
+
+    @include respondTo(upto-medium) {
+        @include transition(all 0.5s ease-in-out);
+    }
+}

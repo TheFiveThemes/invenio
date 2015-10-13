@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "header/header";
+
+/*--------------------------------------------------------------
+## Header Feature Image
+--------------------------------------------------------------*/
+@import "header/feature-image";
+
+.site {
+    width: 100vw;
+    @include clearfix;
+    &:before {
+        z-index: -1;
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .15;
+        filter: blur(10px) grayscale(100%);
+    }
+}
+
+.site-content,
+.site-footer {
+    width: 100vw;
+    @include respondTo(atleast-narrow) {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+.content-area, 
+.widget-area,
+.site-info {
+    max-width: ms(18);
+    padding: ms(2);
+    margin: 0 auto;
+    
+    @include respondTo(atleast-wide) {
+        padding: ms(6);
+    }
+    @include respondTo(atleast-extra-wide) {
+        font-size: ms(1);
+        padding: ms(8);
+    }
+}
+
+.content-area {
+    background: $color__background-primary;
+    box-shadow: 0 2px 1px rgba($color__boxshadow-primary,.3);
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Home
+--------------------------------------------------------------*/
+@import "home/home";
+
+/*--------------------------------------------------------------
+## Archive
+--------------------------------------------------------------*/
+@import "archive/archive";
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+@import "primary/asides";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "footer/footer";
+
+/*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+@import "404/404";
