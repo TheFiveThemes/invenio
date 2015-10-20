@@ -118,11 +118,11 @@ add_action( 'widgets_init', 'invenio_widgets_init' );
  * Gives translators ability to deactivate fonts that don't include their language's characters.
  * @since Invenio 1.0
  */
-function ostentus_fonts_url() {
+function invenio_fonts_url() {
     $fonts_url = '';
  
     /* Translators: If there are characters in your language that are not
-    * supported by Roboto Slab, translate this to 'off'. Do not translate
+    * supported by Exo 2, translate this to 'off'. Do not translate
     * into your own language.
     */
     $exo2 = _x( 'on', 'Exo 2 font: on or off', 'invenio' );
@@ -149,6 +149,8 @@ function ostentus_fonts_url() {
  * Enqueue scripts and styles.
  */
 function invenio_scripts() {
+    wp_enqueue_style( 'invenio-fonts', invenio_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'invenio-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'invenio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -158,6 +160,10 @@ function invenio_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+    wp_enqueue_script('jquery');
+
+    wp_enqueue_script( 'masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js' );
 }
 add_action( 'wp_enqueue_scripts', 'invenio_scripts' );
 

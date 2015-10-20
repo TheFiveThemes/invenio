@@ -77,7 +77,7 @@
     }
 }
 
-.entry-header .entry-meta,
+.entry-meta,
 .entry-footer {
     @include text-format(note);
     color: $color__text-softer;

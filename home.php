@@ -15,15 +15,15 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div id="features" class="site-main">
+			<div id="grid" class="site-main posts-grid">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content-home', get_post_format() ); ?>
 
-			<?php endwhile; ?>
+			<?php endwhile; ?>			
+			</div>
 
 			<?php the_posts_navigation(); ?>
-			</div>
 
 		<?php else : ?>
 
@@ -36,4 +36,15 @@ get_header(); ?>
 		<?php endif; ?>
 		
 <?php //get_sidebar(); ?>
+
+	<script type="text/javascript">
+		jQuery(window).load(function() {
+			var container = document.querySelector('#grid');
+			var msnry = new Masonry( container, {
+				itemSelector: '.grid-item',
+				columnWidth: '.grid-item',                
+			});
+	    });
+	</script>
+
 <?php get_footer(); ?>
