@@ -10,7 +10,7 @@
 		
 		<?php if ( has_post_thumbnail() ) :
 			$image_id = get_post_thumbnail_id();
-			$url = wp_get_attachment_image_src( $image_id, 'ostentus-large' );
+			$url = wp_get_attachment_image_src( $image_id, 'invenio-preview' );
 		?>
 		<figure class="entry-image">
 			<a class="entry-permalink" href="<?php echo esc_url( get_permalink() ); ?>"><img src="<?php echo esc_attr( $url[0] ); ?>"></a>

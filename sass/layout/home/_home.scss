@@ -74,6 +74,20 @@
             width: 20%;
         }
 
+        // &.sticky {
+        //     @include respondTo(atleast-narrow) {
+        //         width: 100%;
+        //     }
+
+        //     @include respondTo(atleast-wide) {
+        //         width: 66%;
+        //     }
+
+        //     @include respondTo(atleast-ultra-wide) {
+        //         width: 40%;
+        //     }
+        // }
+
         // background: rgba($color__background-feature,.8);
         // &:nth-child(even) {
         //     background: rgba($color__background-feature,.6);

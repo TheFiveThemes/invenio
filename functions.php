@@ -42,7 +42,8 @@ function invenio_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 300, 300, true );
-    add_image_size( 'invenio-large', 1500, 1000, true  );
+    add_image_size( 'invenio-preview', 500 );
+    add_image_size( 'invenio-large', 1500 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
