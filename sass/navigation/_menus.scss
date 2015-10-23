@@ -60,6 +60,12 @@
 
 // Post Navigation
 
+.posts-navigation {
+    a:hover {
+        background: $color__background-secondary;
+    }
+}
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

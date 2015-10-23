@@ -1,5 +1,12 @@
 .widget-area {
-    overflow: hidden;
+    padding: 2% 2% 0;
+    text-align: justify;
+
+    &:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
     
     @include respondTo(atleast-wide) {
         padding-top: ms(2);

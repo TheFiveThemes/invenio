@@ -1,17 +1,11 @@
 .site-footer {
     clear: both;
+    text-align: center;
     color: $color__text-footer;
-
-    .home & {
-        @include respondTo(atleast-wide) {
-            background: $color__background-secondary;
-        }
-    }
 
     .site-info {
         list-style: none;
-        padding-top: ms(2);
-        padding-bottom: ms(2);
+        padding: ms(2);
         margin-bottom: ms(0);
         li {
             display: block;
@@ -23,7 +17,7 @@
     }
     a {
         display: inline-block;
-        padding: ms(-2) ms(-2) ms(-2) 0px;
+        padding: ms(-2);
         color: $color__link-footer;
         text-decoration: none;
         &:hover {

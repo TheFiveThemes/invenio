@@ -6,14 +6,18 @@
     color: $color__text-secondary;
 
     @include respondTo(atleast-medium) {
+        display: inline-block;
         width: 50%;
-        float: left;
-        padding: ms(2) ms(2) ms(2) 0;
+        text-align: left;
+        margin-bottom: 2%;
+        padding: 2%;
+        vertical-align: top;
+        // padding: ms(2) ms(2) ms(2) 0;
 
-        &:nth-child(even) {
-            float: right;
-            padding: ms(2) 0 ms(2) ms(2);
-        }
+        // &:nth-child(even) {
+        //     float: right;
+        //     padding: ms(2) 0 ms(2) ms(2);
+        // }
     }
 
 	/* Make sure select elements fit in widgets. */

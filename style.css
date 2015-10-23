@@ -719,6 +719,9 @@ a {
 .social-navigation {
   display: none; }
 
+.posts-navigation a:hover {
+  background: rgba(0, 0, 0, 0.3); }
+
 .comment-navigation .nav-previous a, .comment-navigation .nav-next a,
 .posts-navigation .nav-previous a,
 .posts-navigation .nav-next a,
@@ -917,26 +920,28 @@ blockquote.alignright {
       margin: 0 auto; } }
 
 .content-area,
-.widget-area,
-.site-info {
+.widget-area {
   max-width: 38.443359375em;
   padding: 1.5em;
-  margin: 0 auto; }
+  margin: 0 auto 1.5em; }
   @media (min-width: 1100px) {
     .content-area,
-    .widget-area,
-    .site-info {
+    .widget-area {
       padding: 3.375em; } }
   @media (min-width: 1400px) {
     .content-area,
-    .widget-area,
-    .site-info {
+    .widget-area {
       font-size: 1.286em;
       padding: 5.0625em; } }
 
 .content-area {
   background: #fff;
-  box-shadow: 0 2px 1px rgba(132, 120, 150, 0.3); }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+
+.widget-area,
+.posts-navigation {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3); }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1034,6 +1039,10 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Home
 --------------------------------------------------------------*/
+.home .posts-grid {
+  margin-left: -0.6666666667em;
+  margin-right: -0.6666666667em;
+  margin-bottom: 0.6666666667em; }
 .home .grid-item {
   -webkit-animation: fadein 1s ease-out 0.37s backwards;
   animation: fadein 1s ease-out 0.37s backwards;
@@ -1072,7 +1081,7 @@ blockquote.alignright {
   @media (min-width: 480px) {
     .home .grid-item {
       width: 50%; } }
-  @media (min-width: 800px) {
+  @media (min-width: 1100px) {
     .home .grid-item {
       width: 33%; } }
   @media (min-width: 1600px) {
@@ -1097,7 +1106,6 @@ blockquote.alignright {
 .home .posts-navigation .nav-next {
   -webkit-animation: fadein 1s ease-out 0.37s backwards;
   animation: fadein 1s ease-out 0.37s backwards;
-  clear: both;
   margin: 0;
   padding: 0;
   text-align: center; }
@@ -1293,14 +1301,11 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .site-footer {
   clear: both;
+  text-align: center;
   color: rgba(255, 255, 255, 0.3); }
-  @media (min-width: 1100px) {
-    .home .site-footer {
-      background: rgba(50, 30, 80, 0.2); } }
   .site-footer .site-info {
     list-style: none;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 1.5em;
     margin-bottom: 1em; }
     .site-footer .site-info li {
       display: block;
@@ -1310,7 +1315,7 @@ blockquote.alignright {
       margin: 0; }
   .site-footer a {
     display: inline-block;
-    padding: 0.6666666667em 0.6666666667em 0.6666666667em 0px;
+    padding: 0.6666666667em;
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none; }
     .site-footer a:hover {
@@ -1389,7 +1394,12 @@ blockquote.alignright {
 # Sidebar
 --------------------------------------------------------------*/
 .widget-area {
-  overflow: hidden; }
+  padding: 2% 2% 0;
+  text-align: justify; }
+  .widget-area:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
   @media (min-width: 1100px) {
     .widget-area {
       padding-top: 1.5em;
@@ -1415,12 +1425,12 @@ blockquote.alignright {
   /* Make sure select elements fit in widgets. */ }
   @media (min-width: 800px) {
     .widget {
+      display: inline-block;
       width: 50%;
-      float: left;
-      padding: 1.5em 1.5em 1.5em 0; }
-      .widget:nth-child(even) {
-        float: right;
-        padding: 1.5em 0 1.5em 1.5em; } }
+      text-align: left;
+      margin-bottom: 2%;
+      padding: 2%;
+      vertical-align: top; } }
   .widget select, .widget input {
     max-width: 100%; }
   .widget ul, .widget li {

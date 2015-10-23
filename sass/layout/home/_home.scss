@@ -19,6 +19,12 @@
     //     width: 100vw;
     // }
 
+    .posts-grid {
+        margin-left: -(ms(-2));
+        margin-right: -(ms(-2));
+        margin-bottom: ms(-2);
+    }
+
     .grid-item {
         @include animation(fadein 1s ease-out 0.37s backwards);
         
@@ -60,7 +66,7 @@
             width: 50%;
         }
 
-        @include respondTo(atleast-medium) {
+        @include respondTo(atleast-wide) {
             width: 33%;
         }
 
@@ -140,8 +146,6 @@
     .posts-navigation .nav-previous,
     .posts-navigation .nav-next {
         @include animation(fadein 1s ease-out 0.37s backwards);
-        
-        clear: both;
         margin: 0;
         padding: 0;
         text-align: center;

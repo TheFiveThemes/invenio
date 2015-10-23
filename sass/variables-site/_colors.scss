@@ -38,7 +38,6 @@ $color__highlight-mix60: mix($color__base, $color__highlight-tint20, 60%);
 // ...
 
 
-
 /*--------------------------------------------------------------
 # Color Applications
 --------------------------------------------------------------*/
@@ -53,7 +52,7 @@ $color__background-pre: $color__base-tint95;
 $color__background-ins: #fff9c0;
 
 $color__background-primary: #fff;
-$color__background-secondary: rgba($color__base,.2);
+$color__background-secondary: rgba(#000,.3);
 $color__background-footer: $color__base-tint95;
 $color__background-404: $color__accent;
 $color__background-archive-header: $color__base-tint90;
@@ -134,4 +133,4 @@ $color__border-secondary: rgba($color__base,.3);
 $color__border-sidebar-navigation: $color__base-tint80;
 $color__border-table-row: rgba($color__base,.03);
 
-$color__boxshadow-primary: $color__base-tint40;
+$color__boxshadow-primary: #000;
